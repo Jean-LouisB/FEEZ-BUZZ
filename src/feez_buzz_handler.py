@@ -3,7 +3,7 @@ from config import Config
 
 class FeezBuzzHandler:
     @staticmethod
-    def get_value_to_show(n: int, is_simple_output:bool=Config.default_output_choice):
+    def get_value_to_show(n: int, is_simple_output:bool=Config.DEFAULT_IS_SIMPLE_OUTPUT):
         """
         Returns:
             The str value or the corresponding output from Config.divisors (n or output)
@@ -11,20 +11,20 @@ class FeezBuzzHandler:
             ValueError: If a Config.divisors key is 0.
             ValueError: If the number provided is not an integer.
         """
-        if 0 in Config.divisors:
+        if 0 in Config.DIVISORS:
             raise ValueError("See your config file. divisors key can't be 0")
         try:
             n = FeezBuzzHandler.valid_n(n)
         except Exception as e:
             raise e
         value_to_return = []
-        for k, v in Config.divisors.items():
+        for k, v in Config.DIVISORS.items():
             if n % k == 0:
                 if is_simple_output:
                     value_to_return.append(str(v["output"]))
                 else:
                     value_to_return.append(str(v["func"](n)))
-        return Config.sep_multiple_output.join(value_to_return) if value_to_return else str(n)
+        return Config.SUB_SEPARATOR.join(value_to_return) if value_to_return else str(n)
 
     @staticmethod
     def valid_n(n: int):

@@ -1,12 +1,12 @@
 class Config:
-    max = 50                    # the limit of default iteration 
-    sep = ', '                  # separator in the output
-    sep_multiple_output = "-"   # separator Between FEEZ and BUZZ for 15, 30 ... 
-    end = "."                   # Character at least of the output
+    MAX = 50                    # the limit of default iteration 
+    SEPARATOR = ', '            # separator in the output
+    SUB_SEPARATOR = "-"         # separator Between FEEZ and BUZZ for 15, 30 ... 
+    END_OUTPUT = "."            # Character at least of the output
     
     # divisors is a dict with k = divisor, value = output or function
     # k can't be 0 or other than int.
-    divisors = {
+    DIVISORS = {
         #0:"AIE!", -> FORBIDEN !
         3: {
             "output":"FEEZ",
@@ -18,5 +18,5 @@ class Config:
         }
     }
     # Default list to handle.
-    default_iterable = range(1,max+1)
-    default_output_choice = True
+    DEFAULT_ITERABLE = range(1,MAX+1)
+    DEFAULT_IS_SIMPLE_OUTPUT = True

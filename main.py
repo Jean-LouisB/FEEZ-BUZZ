@@ -7,7 +7,7 @@ FeezBuzzHandler.get_value_to_show returns the value or the output.
 """
 
 
-def run(iterable: list[int] = Config.default_iterable,is_simple_output:bool=True):
+def run(iterable: list[int] = Config.DEFAULT_ITERABLE,is_simple_output:bool=True):
     print(
         handlers.print_list_to_str(
             [
