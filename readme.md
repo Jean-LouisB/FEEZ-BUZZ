@@ -27,3 +27,8 @@
 ## Run
 
     python main.py
+
+## Output or Func:
+
+    FeezBuzzHandler.get_value_to_show(i) # output
+    FeezBuzzHandler.get_value_to_show(i, True) # function
