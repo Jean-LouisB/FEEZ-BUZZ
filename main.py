@@ -19,6 +19,7 @@ def run(iterable: list[int] = Config.DEFAULT_ITERABLE,is_simple_output:bool=True
 
 if __name__ == "__main__":
     try:
+        handlers.valid_config()
         run(is_simple_output=handlers.which_output())
     except Exception as e:
         print(f"{str(e)}")

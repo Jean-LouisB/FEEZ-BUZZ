@@ -11,8 +11,6 @@ class FeezBuzzHandler:
             ValueError: If a Config.divisors key is 0.
             ValueError: If the number provided is not an integer.
         """
-        if 0 in Config.DIVISORS:
-            raise ValueError("See your config file. divisors key can't be 0")
         try:
             n = FeezBuzzHandler.valid_n(n)
         except Exception as e:

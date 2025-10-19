@@ -7,7 +7,7 @@ class Config:
     # divisors is a dict with k = divisor, value = output or function
     # k can't be 0 or other than int.
     DIVISORS = {
-        #0:"AIE!", -> FORBIDEN !
+        # 0:"AIE!", #-> FORBIDEN !
         3: {
             "output":"FEEZ",
             "func": lambda x : x*x

@@ -13,14 +13,12 @@ help:
 run:
 	@echo "App started ..."
 	python main.py
-	@echo "... End."
-	make clean
+	@make clean
 
 test:
 	@echo "tests are running"
 	pytest -v
 
 clean:
-	@echo "Cleaning of the cache ..."
 	@find . -type d -name "__pycache__" -exec rm -r {} + 
 	@find . -type d -name ".pytest_cache" -exec rm -r {} + 
