@@ -1,4 +1,4 @@
-from feez_buzz_handler import FeezBuzzHandler
+from src.feez_buzz_handler import FeezBuzzHandler
 import pytest
 import re
 

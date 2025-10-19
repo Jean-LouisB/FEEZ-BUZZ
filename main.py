@@ -1,6 +1,6 @@
-from feez_buzz_handler import FeezBuzzHandler
+from src.feez_buzz_handler import FeezBuzzHandler
 from config import Config
-import handlers
+from src import handlers
 """
 Config contains the divisors list and them output values to show.
 FeezBuzzHandler.get_value_to_show returns the value or the output.
