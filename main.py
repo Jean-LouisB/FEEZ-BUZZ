@@ -24,4 +24,4 @@ if __name__ == "__main__":
     except handlers.ConfigError as e:
         print(f"\nError in your config file, please check it:\n\n       {str(e)}\n")
     except Exception as e:
-        print(f"{str(e)}")
+        print(f"Unknown error :\n\n    {str(e)}\n")
