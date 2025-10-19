@@ -29,6 +29,10 @@
 
     python main.py
 
+ou
+
+    make run # see Makefile below.
+
 ## Output or Func:
 
 In the config file :
