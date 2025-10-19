@@ -30,16 +30,17 @@
 
     python main.py
 
-ou
+or
 
-    make run # see Makefile below.
+    make run    # see Makefile below.
 
-## Output or Func:
+## Unit Tests
 
-In the config file :
+    pytest -v
 
-    default_output_choice = True    # output (1,2,FEEZ ...)
-    default_output_choice = False   # function(n)
+or
+
+    make test   # see Makefile below.
 
 ## Makefile
 
