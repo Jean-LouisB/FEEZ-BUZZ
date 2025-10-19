@@ -3,7 +3,7 @@ from config import Config
 
 class FeezBuzzHandler:
     @staticmethod
-    def get_value_to_show(n: int, output:bool=Config.default_output_choice):
+    def get_value_to_show(n: int, is_simple_output:bool=Config.default_output_choice):
         """
         Returns:
             The str value or the corresponding output from Config.divisors (n or output)
@@ -20,7 +20,7 @@ class FeezBuzzHandler:
         value_to_return = []
         for k, v in Config.divisors.items():
             if n % k == 0:
-                if output:
+                if is_simple_output:
                     value_to_return.append(str(v["output"]))
                 else:
                     value_to_return.append(str(v["func"](n)))

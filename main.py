@@ -7,11 +7,11 @@ FeezBuzzHandler.get_value_to_show returns the value or the output.
 """
 
 
-def run(iterable: list[int] = Config.default_iterable):
+def run(iterable: list[int] = Config.default_iterable,is_simple_output:bool=True):
     print(
         handlers.print_list_to_str(
             [
-                FeezBuzzHandler.get_value_to_show(i) for i in iterable
+                FeezBuzzHandler.get_value_to_show(i, is_simple_output=is_simple_output) for i in iterable
             ]
         )
     )
@@ -19,6 +19,6 @@ def run(iterable: list[int] = Config.default_iterable):
 
 if __name__ == "__main__":
     try:
-        run()
+        run(is_simple_output=handlers.which_output())
     except Exception as e:
         print(f"{str(e)}")
