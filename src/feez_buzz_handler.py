@@ -1,6 +1,7 @@
 from config import Config
 
 
+
 class FeezBuzzHandler:
     @staticmethod
     def get_value_to_show(n: int, is_simple_output:bool=Config.DEFAULT_IS_SIMPLE_OUTPUT):
