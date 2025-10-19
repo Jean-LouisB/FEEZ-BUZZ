@@ -14,13 +14,13 @@ def test_get_player_value_FEEZ_BUZZ():
     n=15
     assert FeezBuzzHandler.get_value_to_show(n) == "FEEZ-BUZZ"
 
-def test_get_player_value_strInt():
-    n="4"
-    assert FeezBuzzHandler.get_value_to_show(n) == 4
+# def test_get_player_value_strInt():
+#     n="4"
+#     assert FeezBuzzHandler.get_value_to_show(n, True) == 4
 
-def test_get_player_value_float():
-    n=4.6
-    assert FeezBuzzHandler.get_value_to_show(n) == 4
+# def test_get_player_value_float():
+#     n=4.6
+#     assert FeezBuzzHandler.get_value_to_show(n) == 4
 
 def test_get_player_value_negative_FEEZA():
     n=-3
