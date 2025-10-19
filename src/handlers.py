@@ -6,14 +6,14 @@ def valid_config():
     attr_required = ["MAX","SEPARATOR","SUB_SEPARATOR","END_OUTPUT",  "DIVISORS", "DEFAULT_ITERABLE", "DEFAULT_IS_SIMPLE_OUTPUT"]
     for att in attr_required:
         if not hasattr(Config, att):
-            raise ConfigError(f"See your config file. Missing required attribute: {att}")
+            raise ConfigError(f"Missing required attribute: {att}")
     if 0 in Config.DIVISORS:
-        raise ConfigError("See your config file. 'DIVISORS' key can't be 0")
+        raise ConfigError("'DIVISORS' key can't be 0")
     if Config.MAX <=1:
-        raise ConfigError("See your config file. 'MAX' must be greater than 1.")
+        raise ConfigError("'MAX' must be greater than 1.")
     for k,v in Config.DIVISORS.items():
         if not all([sub_k in v.keys() for sub_k in Config.DIVISORS_KEYS]):
-            raise ConfigError(f"See your config file. Items of 'DIVISORS' must have the keys {Config.DIVISORS_KEYS}.")
+            raise ConfigError(f"Items of 'DIVISORS' must have the keys {Config.DIVISORS_KEYS}.")
 
 def print_list_to_str(result:list[str], sep :int=Config.SEPARATOR, end:str=Config.END_OUTPUT) :
     return f"{sep.join(result)}{end}"

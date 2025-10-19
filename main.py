@@ -21,5 +21,7 @@ if __name__ == "__main__":
     try:
         handlers.valid_config()
         run(is_simple_output=handlers.which_output())
+    except handlers.ConfigError as e:
+        print(f"\nError in your config file, please check it:\n\n       {str(e)}\n")
     except Exception as e:
         print(f"{str(e)}")
