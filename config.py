@@ -19,3 +19,4 @@ class Config:
     }
     # Default list to handle.
     default_iterable = range(1,max+1)
+    default_output_choice = True

@@ -3,7 +3,7 @@ from config import Config
 
 class FeezBuzzHandler:
     @staticmethod
-    def get_value_to_show(n: int, output:bool=True):
+    def get_value_to_show(n: int, output:bool=Config.default_output_choice):
         """
         Returns:
             The str value or the corresponding output from Config.divisors (n or output)

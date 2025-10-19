@@ -23,6 +23,7 @@
     }
     # Default list to handle.
     default_iterable = range(1,max+1)
+    default_output_choice = True
 
 ## Run
 
@@ -30,5 +31,7 @@
 
 ## Output or Func:
 
-    FeezBuzzHandler.get_value_to_show(i) # output
-    FeezBuzzHandler.get_value_to_show(i, True) # function
+In the config file :
+
+    default_output_choice = True    # output (1,2,FEEZ ...)
+    default_output_choice = False   # function(n)
