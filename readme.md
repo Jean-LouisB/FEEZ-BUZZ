@@ -35,3 +35,14 @@ In the config file :
 
     default_output_choice = True    # output (1,2,FEEZ ...)
     default_output_choice = False   # function(n)
+
+## Makefile
+
+     _______________________________________________
+    |   Commands        |          Actions          |
+    |-------------------|---------------------------|
+    | make help  ------ | ------> Show this help.   |
+    | make run   ------ | ------> Run the app.      |
+    | make test  ------ | ------> Run unit tests.   |
+    | make clean ------ | ------> Clean the cache.  |
+    |_______________________________________________|
