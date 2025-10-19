@@ -1,4 +1,3 @@
-import pytest
 from src import handlers
 
 def test_print_list_to_str():
