@@ -12,7 +12,7 @@ help:
 
 run:
 	@echo "App started ..."
-	python main.py
+	@python main.py
 	@make clean
 
 test:

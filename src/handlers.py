@@ -1,8 +1,17 @@
 from config import Config
 
+class ConfigError(Exception):pass
+
 def valid_config():
     if 0 in Config.DIVISORS:
-        raise ValueError("See your config file. divisors key can't be 0")
+        raise ConfigError("See your config file. 'DIVISORS' key can't be 0")
+    if Config.MAX <=1:
+        raise ConfigError("See your config file. 'MAX' must be greater than 1.")
+    keys_required = ["output","func"]
+    for k,v in Config.DIVISORS.items():
+        if not all([sub_k in v.keys() for sub_k in keys_required]):
+            raise ConfigError(f"See your config file. Items of 'DIVISORS' must have the keys {keys_required}.")
+
 
 def print_list_to_str(result:list[str], sep :int=Config.SEPARATOR, end:str=Config.END_OUTPUT) :
     return f"{sep.join(result)}{end}"
@@ -12,7 +21,7 @@ def which_output():
         "o":True,
         "f":False
     }
-    choose = input("Output or function (o/f) : ")
+    choose = input("Output or function (o/f) (enter = 'o'): ") or 'o'
     if not choose in chooses:
         print("Error : Choose between 'o' and 'f'.")
         return which_output()
