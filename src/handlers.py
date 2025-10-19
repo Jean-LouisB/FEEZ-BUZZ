@@ -11,10 +11,9 @@ def valid_config():
         raise ConfigError("See your config file. 'DIVISORS' key can't be 0")
     if Config.MAX <=1:
         raise ConfigError("See your config file. 'MAX' must be greater than 1.")
-    keys_required = ["output","func"]
     for k,v in Config.DIVISORS.items():
-        if not all([sub_k in v.keys() for sub_k in keys_required]):
-            raise ConfigError(f"See your config file. Items of 'DIVISORS' must have the keys {keys_required}.")
+        if not all([sub_k in v.keys() for sub_k in Config.DIVISORS_KEYS]):
+            raise ConfigError(f"See your config file. Items of 'DIVISORS' must have the keys {Config.DIVISORS_KEYS}.")
 
 def print_list_to_str(result:list[str], sep :int=Config.SEPARATOR, end:str=Config.END_OUTPUT) :
     return f"{sep.join(result)}{end}"

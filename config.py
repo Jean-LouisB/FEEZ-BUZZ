@@ -6,15 +6,16 @@ class Config:
     
     # divisors is a dict with k = divisor, value = output or function
     # k can't be 0 or other than int.
+    DIVISORS_KEYS = ["output","func"]
     DIVISORS = {
         # 0:"AIE!", #-> FORBIDEN !
         3: {
-            "output":"FEEZ",
-            "func": lambda x : x*x
+            f"{DIVISORS_KEYS[0]}":"FEEZ",
+            f"{DIVISORS_KEYS[1]}": lambda x : x*x
         },
         5: {
-            "output":"BUZZ",
-            "func": lambda x : x+x
+            f"{DIVISORS_KEYS[0]}":"BUZZ",
+            f"{DIVISORS_KEYS[1]}": lambda x : x+x
         }
     }
     # Default list to handle.

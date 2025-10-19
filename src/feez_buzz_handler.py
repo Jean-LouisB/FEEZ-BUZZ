@@ -20,9 +20,9 @@ class FeezBuzzHandler:
         for k, v in Config.DIVISORS.items():
             if n % k == 0:
                 if is_simple_output:
-                    value_to_return.append(str(v["output"]))
+                    value_to_return.append(str(v[Config.DIVISORS_KEYS[0]]))
                 else:
-                    value_to_return.append(str(v["func"](n)))
+                    value_to_return.append(str(v[Config.DIVISORS_KEYS[1]](n)))
         return Config.SUB_SEPARATOR.join(value_to_return) if value_to_return else str(n)
 
     @staticmethod
