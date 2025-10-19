@@ -18,6 +18,8 @@ run:
 test:
 	@echo "tests are running"
 	pytest -v
+	@make clean
+
 
 clean:
 	@find . -type d -name "__pycache__" -exec rm -r {} + 
