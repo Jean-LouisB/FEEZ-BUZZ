@@ -1,4 +1,4 @@
-# Fezz-Buzz
+# FEEZ-BUZZ
 
 ## config file:
 
