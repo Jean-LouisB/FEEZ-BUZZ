@@ -27,6 +27,7 @@ def print_item_to_item(result:list[str]):
         sys.stdout.write("\r"+str(r))
         sys.stdout.flush()
         time.sleep(Config.ITEM_TO_ITEM_SLEEP)
+    print()
 
 def which_output():
     chooses = {
@@ -40,9 +41,9 @@ def which_output():
     return chooses[choose.lower()]
 
 def which_print_mode():
-    print("Which print mode?")
-    print("1 - list")
-    print("2 - item to item")
+    print("\nWhich print mode?\n")
+    print("     1 - list.")
+    print("     2 - item to item.\n")
     choose = input("Your choose (1 or 2) : ")
     if choose not in ["1","2"]:
         return which_print_mode()
